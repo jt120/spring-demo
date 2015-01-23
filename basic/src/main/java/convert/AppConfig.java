@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.datetime.DateFormatter;
 import org.springframework.format.datetime.DateFormatterRegistrar;
@@ -15,6 +16,7 @@ import org.springframework.format.support.FormattingConversionService;
 import java.util.Date;
 
 @Configuration
+@ComponentScan
 public class AppConfig {
 
   @Bean
@@ -33,6 +35,13 @@ public class AppConfig {
 
     return conversionService;
   }
+
+    @Bean
+    public UserService userService() {
+        return new UserService();
+    }
+
+
 
 //    @Autowired
 //            @Qualifier("conversionService")

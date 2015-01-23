@@ -11,9 +11,16 @@ import java.util.Date;
 public class User {
 
     private String name;
-
     @DateTimeFormat
     private Date birthday;
+
+    public User() {
+    }
+
+    public User(String name, Date birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
 
     public String getName() {
         return name;
