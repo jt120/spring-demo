@@ -12,7 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
    classes = {
        TransferServiceConfig.class,
        StandaloneDataConfig.class,
-       JndiDataConfig.class})
+//       JndiDataConfig.class
+   })
 @ActiveProfiles("dev")
 public class TransferServiceTest {
 
